@@ -1,0 +1,134 @@
+body {
+	font-family: sans-serif;
+	margin: 20px;
+	overflow: hidden;
+	background: radial-gradient(rgb(54, 116, 121), transparent);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+legend {
+	display: contents;
+}
+
+.head {
+	font-size: 24px;
+	font-weight: 700;
+	margin: 10px;
+}
+
+.first-head {
+	max-width: 400px;
+	width: 100%;
+	padding: 30px;
+	border-radius: 6px;
+	border: 2px solid black;
+	background: radial-gradient(rgb(77, 93, 50), transparent);
+}
+
+.main {
+	display: block;
+	padding: 10px;
+	font-size: 20px;
+}
+
+input:not([type="checkbox"]),
+textarea {
+	width: 450px;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid black;
+	outline: none;
+}
+
+input:disabled,
+textarea:disabled {
+	opacity: 0.7;
+}
+
+input {
+	margin: 10px 10px 10px 0;
+}
+
+.main-foot {
+	padding: 10px;
+	font-size: 20px;
+}
+
+textarea {
+	margin: 10px;
+	resize: vertical;
+	max-height: 200px;
+	min-height: 40px;
+	height: 50px;
+}
+
+.checkbox-label:checked {
+	background: url(./images/check-icon.svg), #9e1fff;
+}
+
+.main-click {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+.checkbox-label {
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #333;
+	border-radius: 4px;
+	margin-right: 10px;
+}
+
+.checkbox-label:checked {
+	background-color: #9e1fff;
+	background-image: url(./images/check-icon.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px;
+}
+
+.button {
+	display: block;
+	cursor: pointer;
+	padding: 6px 20px;
+	border-radius: 5px;
+	border: none;
+	margin-top: 5px;
+	margin-left: 10px;
+	font-size: 16px;
+	background-color: #9e1fff;
+	color: white;
+	transition: opacity 0.2s;
+}
+
+button:hover {
+	opacity: 0.85;
+}
+
+button:active {
+	background-color: #8719db;
+}
+
+button:disabled {
+	opacity: 0.7;
+	cursor: not-allowed;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+.checkbox-label:focus-visible {
+	outline: 2px solid #9e1fff;
+	outline-offset: 1px;
+}
