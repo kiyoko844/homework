@@ -1,0 +1,179 @@
+html {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 400;
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+.flex-container {
+	max-width: 1220px;
+	width: 100%;
+	height: 120px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border: 1px solid #d3cbd9;
+}
+
+.logo,
+.logo-1,
+.logo-2 {
+	color: #2c332f;
+	font-size: 22px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.logo-2 {
+	display: block;
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 0;
+	margin: 0;
+}
+
+.text {
+	text-transform: uppercase;
+	color: #858e8a;
+	font-size: 14px;
+	list-style-type: none;
+}
+
+.tel {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.phone {
+	color: #2c332f;
+	font-size: 18px;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+.article {
+	padding-top: 80px;
+	padding-bottom: 120px;
+}
+
+.article-title {
+	max-width: 596px;
+	font-family: Oswald;
+	font-weight: 600;
+	line-height: 115%;
+	text-transform: uppercase;
+	color: #2c332f;
+	margin-bottom: 40px;
+}
+
+.article-title-large {
+	font-size: 48px;
+}
+
+.article-title-medium {
+	font-size: 36px;
+	margin-top: 80px;
+}
+
+.article-mb-1 {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	color: #535755;
+	margin-bottom: 80px;
+}
+
+.article-mb-2 {
+	margin-bottom: 40px;
+}
+
+.article-text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	color: #535755;
+	margin-bottom: 20px;
+}
+
+.article-decor-wrapper {
+	position: relative;
+}
+
+.article-decor-wrapper::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	background: url(../images/dec2.png) no-repeat;
+	width: 528px;
+	height: 48px;
+}
+
+.article-decor-wrapper-1::before {
+	top: 100px;
+	left: -350px;
+}
+
+.article-decor-wrapper-2::before {
+	right: -350px;
+	bottom: 100px;
+}
+
+.article-img {
+	width: 100%;
+}
+
+.article-list {
+	margin-top: 0;
+	padding-left: 16px;
+}
+
+.article-item {
+	margin-bottom: 12px;
+}
+
+.article-item::marker {
+	color: #3596ed;
+	font-size: 22px;
+}
+
+.article-play-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	background-color: #3596ed;
+	border: none;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	cursor: pointer;
+}
