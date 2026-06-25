@@ -3,6 +3,22 @@
 	padding-top: 80px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 .hero::after {
 	content: "";
 	position: absolute;
@@ -49,7 +65,7 @@
 	top: 40px;
 	left: 50%;
 	transform: translateX(-50%);
-	max-width: 120px;
+	max-width: 161px;
 	border: 1px solid #535755;
 	padding: 22px;
 	background: rgba(255, 255, 255, 0.9);
