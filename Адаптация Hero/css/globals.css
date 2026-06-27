@@ -4,15 +4,36 @@ html {
 }
 
 body {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	min-width: 375px;
 	min-height: 100vh;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+*,
 * ::before,
 * ::after {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
 }
 
 a,
@@ -23,6 +44,7 @@ button {
 img {
 	max-width: 100%;
 	height: auto;
+	-o-object-fit: cover;
 	object-fit: cover;
 }
 
@@ -30,10 +52,6 @@ img {
 	max-width: 1250px;
 	margin: 0 auto;
 	padding: 0 15px;
-}
-
-a {
-	text-decoration: none;
 }
 
 .text {
@@ -55,6 +73,9 @@ a {
 	color: #fff;
 	background-color: #3596ed;
 	cursor: pointer;
+	-webkit-transition:
+		opacity 0.2s,
+		background-color 0.2s;
 	transition:
 		opacity 0.2s,
 		background-color 0.2s;
@@ -105,6 +126,15 @@ a {
 	color: #858e8a;
 }
 
+.decor::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: calc(50% - 250px);
+	height: 48px;
+	background: url(../images/dec2.png) repeat-x;
+}
+
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
@@ -122,10 +152,32 @@ summary:focus-visible {
 	.container {
 		max-width: 576px;
 	}
+
+	.title-large {
+		font-size: 40px;
+		margin-bottom: 30px;
+	}
+
+	.home-page .title-large {
+		max-width: initial;
+		text-align: center;
+	}
+
+	.title-medium {
+		font-size: 22px;
+	}
 }
 
 @media (width <= 576px) {
 	.section {
 		margin-bottom: 80px;
+	}
+
+	.title-large {
+		font-size: 32px;
+	}
+
+	.title-medium {
+		font-size: 18px;
 	}
 }

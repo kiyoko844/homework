@@ -6,9 +6,6 @@
 		rgba(73, 169, 255, 0.2) 0%,
 		rgba(252, 124, 217, 0.2) 100%
 	);
-}
-
-.footer {
 	text-align: center;
 }
 
@@ -62,7 +59,7 @@
 320px
 */
 
-/* @media (width <= 768px) {
+@media (width <= 768px) {
 	.menu ul {
 		flex-direction: column;
 		gap: 25px;
@@ -73,4 +70,4 @@
 	.footer {
 		padding-top: 40px;
 	}
-} */
+}
