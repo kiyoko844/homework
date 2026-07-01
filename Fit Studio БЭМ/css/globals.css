@@ -61,7 +61,7 @@ img {
 	color: #535755;
 }
 
-.button__link {
+.hero__button {
 	display: inline-block;
 	padding: 19px 32px;
 	font-weight: 500;
@@ -81,15 +81,15 @@ img {
 		background-color 0.2s;
 }
 
-.button__link:not(:disabled):active {
+.hero__button:not(:disabled):active {
 	background-color: #2d82cd;
 }
 
-.button__link:hover {
+.hero__button:hover {
 	opacity: 0.85;
 }
 
-.button__link.button__link:disabled {
+.hero__button.hero__button:disabled {
 	opacity: 0.65;
 	cursor: default;
 }
