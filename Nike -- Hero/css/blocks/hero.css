@@ -145,6 +145,10 @@
 	}
 }
 
+.hero__details svg {
+	fill: none;
+}
+
 .hero__details-icon {
 	stroke: currentColor;
 }
