@@ -1,0 +1,32 @@
+@media (width > 768px) {
+	.burger {
+		display: none;
+	}
+}
+
+@media (width <= 768px) {
+	.burger {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+	}
+
+	.burger__icon-menu,
+	.burger__icon-cross {
+		display: block;
+		width: 25px;
+		height: 22px;
+	}
+
+	.burger__icon-menu,
+	.burger--open .burger__icon-cross {
+		display: block;
+	}
+
+	.burger__icon-cross,
+	.burger--open .burger__icon-menu {
+		display: none;
+	}
+}

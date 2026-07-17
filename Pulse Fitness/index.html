@@ -1,0 +1,390 @@
+<!doctype html>
+<html class="page" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pulse Fitness Center</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="./css/index.css" />
+		<link
+			rel="shortcut icon"
+			href="./icons/favicon-fitness-center.svg"
+			type="image/x-icon"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js  "
+			defer
+		></script>
+		<script src="./js/index.js" type="module"></script>
+	</head>
+	<body class="page__body">
+		<header class="header">
+			<div class="container header__container">
+				<a class="logo header__logo" href="/">
+					<img
+						class="logo__img"
+						src="./icons/Fitness-logo-img.svg"
+						alt="Логотип Fitness Center"
+						width="198"
+						height="37"
+					/>
+				</a>
+				<nav
+					class="menu header__menu"
+					id="header__menu"
+					aria-label="Главное меню"
+				>
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link menu__link--active" href="#home" lang="en"
+								>HOME</a
+							>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#catalogs" lang="en">CATALOGS</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#blog" lang="en">BLOG</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#collections" lang="en"
+								>COLLECTIONS</a
+							>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#contact-us" lang="en">CONTACT US</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__actions">
+					<button
+						class="header__actions-button header__actions-button--cart"
+						title="Корзина"
+						aria-label="Корзина"
+					>
+						<svg class="header__icon" width="38" height="26">
+							<use
+								class="header__actions-icon"
+								href="./icons/actions.svg#cart"
+							></use>
+						</svg>
+						<span class="header__actions-badge">2</span>
+					</button>
+					<button
+						class="header__actions-button"
+						title="Поиск"
+						aria-label="Поиск"
+					>
+						<svg class="header__icon" width="29" height="29">
+							<use
+								class="header__actions-icon"
+								href="./icons/actions.svg#search"
+							></use>
+						</svg>
+					</button>
+					<button
+						class="header__burger burger"
+						aria-label="Открыть меню"
+						aria-expanded="false"
+						aria-controls="header__menu"
+					>
+						<svg class="burger__icon-menu" width="25" height="22">
+							<use href="./icons/actions.svg#burger"></use>
+						</svg>
+
+						<svg class="burger__icon-cross" width="25" height="22">
+							<use href="./icons/actions.svg#cross"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="hero">
+				<div class="container hero__container">
+					<div class="hero__body">
+						<div class="hero__content">
+							<h1 class="hero__title">
+								POWER
+								<br />
+								FROM WITHIN
+							</h1>
+
+							<span class="hero__title-shadow">WITHIN</span>
+
+							<button class="hero__button" type="button"></button>
+						</div>
+
+						<div class="hero__image">
+							<picture>
+								<source
+									srcset="./images/section-hero-images.webp"
+									type="image/webp"
+								/>
+								<img
+									class="hero__img"
+									src="./images/section-hero-images.png"
+									alt="Athlete training"
+									width="1920"
+									height="519"
+									loading="lazy"
+								/>
+							</picture>
+						</div>
+					</div>
+
+					<div class="hero__cards">
+						<article class="hero__card hero__card--link">
+							<a class="hero__card-link" href="#">
+								<div class="hero__card-content">
+									<p class="hero__card-category">FITNESS</p>
+									<h3 class="hero__card-title">IMPROVE YOUR STRENGTH</h3>
+								</div>
+
+								<div class="hero__card-footer">
+									<span class="hero__card-text">GET STARTED</span>
+									<svg class="hero__card-arrow" width="21" height="21">
+										<use href="/icons/main-sprite.svg#arrow-right"></use>
+									</svg>
+								</div>
+							</a>
+						</article>
+
+						<article class="hero__card">
+							<div class="hero__card-content">
+								<p class="hero__card-category">BODYBUILDING</p>
+								<h3 class="hero__card-title">GET BEST BODY SHAPES</h3>
+							</div>
+
+							<footer class="hero__card-footer">
+								<a class="hero__card-footer-link" href="#">
+									<span class="hero__card-text">GET STARTED</span>
+
+									<svg class="hero__card-arrow" width="21" height="21">
+										<use href="/icons/main-sprite.svg#arrow-right"></use>
+									</svg>
+								</a>
+							</footer>
+						</article>
+
+						<article class="hero__card">
+							<div class="hero__card-content">
+								<p class="hero__card-category">CROSSFIT</p>
+								<h3 class="hero__card-title">THE BEST DIETARY PLANS</h3>
+							</div>
+
+							<footer class="hero__card-footer">
+								<a class="hero__card-footer-link" href="#">
+									<span class="hero__card-text">GET STARTED</span>
+
+									<svg class="hero__card-arrow" width="21" height="21">
+										<use href="/icons/main-sprite.svg#arrow-right"></use>
+									</svg>
+								</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="about decor" id="about">
+				<div class="container about__container">
+					<div class="about__slide">
+						<div class="about__info">
+							<h2 class="about__title">
+								BE <span class="about__title-accent">BETTER</span>
+							</h2>
+							<div class="about__content">
+								<div class="about__block">
+									<h3 class="about__subtitle">OUR STORY</h3>
+
+									<p class="about__text">
+										Ac nec est ultrices varius morbi et non. Donec quam sed eget
+										purus. Elementum sed malesuada senectus feugiat faucibus
+										morbi a neque ultricies. Nisl maecenas eget ultricies in
+										lobortis.
+									</p>
+								</div>
+
+								<div class="about__block">
+									<h3 class="about__subtitle">OUR MISSION</h3>
+
+									<p class="about__text">
+										Ac nec est ultrices varius morbi et non. Donec quam sed eget
+										purus. Elementum sed malesuada senectus feugiat.
+									</p>
+								</div>
+							</div>
+
+							<a href="#" class="button about__button"> READ MORE </a>
+						</div>
+
+						<div class="about__media">
+							<div class="about__slider swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="about__nutrition">
+											<div class="about__nutrition-item">
+												<div class="about__nutrition-content">
+													<span class="about__nutrition-value">24G</span>
+													<span class="about__nutrition-label">PROTEIN</span>
+												</div>
+											</div>
+
+											<div
+												class="about__nutrition-item about__nutrition-item--accent"
+											>
+												<div class="about__nutrition-content">
+													<span class="about__nutrition-value">5.5G</span>
+													<span
+														class="about__nutrition-label about__nutrition-label--accent"
+														>BCAAS</span
+													>
+												</div>
+											</div>
+										</div>
+
+										<div class="about__product">
+											<img
+												class="about__product-image"
+												src="./images//Whey-protein-img.png"
+												alt="Whey Protein"
+												width="476"
+												height="679"
+											/>
+
+											<div class="about__badge">
+												<img src="./icons/about-icon.svg" alt="" />
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="about__nutrition">
+											<div class="about__nutrition-item">
+												<div class="about__nutrition-content">
+													<span class="about__nutrition-value">5G</span>
+													<span class="about__nutrition-label">CREATINE</span>
+												</div>
+											</div>
+
+											<div
+												class="about__nutrition-item about__nutrition-item--accent"
+											>
+												<div class="about__nutrition-content">
+													<span class="about__nutrition-value">0G</span>
+													<span
+														class="about__nutrition-label about__nutrition-label--accent"
+														>SUGAR</span
+													>
+												</div>
+											</div>
+										</div>
+
+										<div class="about__product">
+											<img
+												class="about__product-image"
+												src="./images/Creatine.png"
+												alt="Creatine Monohydrate"
+												width="476"
+												height="679"
+											/>
+
+											<div class="about__badge">
+												<img src="./icons/about-icon.svg" alt="" />
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="about__nutrition">
+											<div class="about__nutrition-item">
+												<div class="about__nutrition-content">
+													<span class="about__nutrition-value">300MG</span>
+													<span class="about__nutrition-label">CITRULLINE</span>
+												</div>
+											</div>
+
+											<div
+												class="about__nutrition-item about__nutrition-item--accent"
+											>
+												<div class="about__nutrition-content">
+													<span class="about__nutrition-value">6G</span>
+													<span
+														class="about__nutrition-label about__nutrition-label--accent"
+														>CITRULLINE</span
+													>
+												</div>
+											</div>
+										</div>
+
+										<div class="about__product">
+											<img
+												class="about__product-image"
+												src="./images/Citrulline.png"
+												alt="Citrulline"
+												width="476"
+												height="679"
+											/>
+
+											<div class="about__badge">
+												<img src="./icons/about-icon.svg" alt="" />
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="about__nutrition">
+											<div class="about__nutrition-item">
+												<div class="about__nutrition-content">
+													<span class="about__nutrition-value">300G</span>
+													<span class="about__nutrition-label">ARGININ</span>
+												</div>
+											</div>
+
+											<div
+												class="about__nutrition-item about__nutrition-item--accent"
+											>
+												<div class="about__nutrition-content">
+													<span class="about__nutrition-value">30</span>
+													<span
+														class="about__nutrition-label about__nutrition-label--accent"
+														>CAPSULES</span
+													>
+												</div>
+											</div>
+										</div>
+
+										<div class="about__product">
+											<img
+												class="about__product-image"
+												src="./images/Arginine.png"
+												alt="Arginine"
+												width="476"
+												height="679"
+											/>
+
+											<div class="about__badge">
+												<img src="./icons/about-icon.svg" alt="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="about__pagination">
+						<button class="about__pagination-button"></button>
+						<button class="about__pagination-button"></button>
+						<button
+							class="about__pagination-button about__pagination-button--active"
+						>
+							3
+						</button>
+						<button class="about__pagination-button"></button>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
