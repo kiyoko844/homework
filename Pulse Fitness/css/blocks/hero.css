@@ -66,7 +66,7 @@
 	content: "";
 	width: clamp(30px, 3.5vw, 52px);
 	height: clamp(30px, 3.5vw, 52px);
-	background: url("./icons/hero-play.svg") center / contain no-repeat;
+	background: url("../../icons/hero-play.svg") center / contain no-repeat;
 }
 
 .hero__image {
