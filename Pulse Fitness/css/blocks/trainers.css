@@ -11,7 +11,7 @@
 	right: -65px;
 	width: 748px;
 	height: 743px;
-	background: url(/images/decor-img.png) center / contain no-repeat;
+background: url("../../images/decor-img.png") center/contain no-repeat;
 }
 
 .trainers__header {
