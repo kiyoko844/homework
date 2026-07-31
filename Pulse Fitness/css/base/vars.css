@@ -4,19 +4,19 @@
 	--second-family: "Archivo", sans-serif;
 
 	/* colors */
-	--main-color: #ffffff;
+	--background-color: #d9d9d9;
+	--main-color: #fff;
 	--accent-color: #f47521;
 	--bg-color: #141414;
+	--secondary-color: #d0d0d0;
+	--dimness-color: #979797;
+	--border-color: #7c7c7c;
+	--text-muted: #a6a6a6;
+	--surface-color: #303030;
 
 	/* container */
-	--container-width-1: 1200px;
 	--container-width: 1540px;
 	--container-padding: 15px;
-
-	/* header */
-	--header-height: 149px;
-	--header-height-compact: 89px;
-	--header-offset: var(--header-height);
 
 	/* layers */
 	--layer-negative: -1;
@@ -26,6 +26,6 @@
 	--layer-3: 3;
 
 	/* transitions */
-	--transition-time: 0.2s;
-	--transition-time-2: 0.5s;
+	--transition-time: 0.3s;
+	--transition-time-slow: 0.5s;
 }

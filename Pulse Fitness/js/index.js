@@ -1,6 +1,9 @@
 import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
 import { aboutSlider } from "./about-slider.js";
+import { advantages } from "./advantages.js";
+import { locations } from "./locations.js";
+import { timetable } from "./timetable.js";
 
 try {
 	const headerFixed = new HeaderFixed({
@@ -26,6 +29,12 @@ try {
 		headerFixed,
 	);
 	aboutSlider();
+
+	advantages();
+
+	locations();
+
+	timetable();
 } catch (error) {
 	console.error(error);
 }

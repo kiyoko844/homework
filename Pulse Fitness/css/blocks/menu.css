@@ -1,15 +1,23 @@
 .menu__list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	gap: 50px;
 }
 
 .menu__link {
 	position: relative;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	z-index: 0;
-	font-family: "Archivo", sans-serif;
+	font-family: var(--second-family);
 	font-weight: 600;
 	font-size: 22px;
 	color: var(--main-color);
@@ -21,7 +29,7 @@
 
 @media (width <= 1200px) {
 	.menu__list {
-		gap: 32px;
+		gap: 28px;
 	}
 
 	.menu__link {
@@ -31,7 +39,7 @@
 
 @media (width <= 900px) {
 	.menu__list {
-		gap: 20px;
+		gap: 16px;
 	}
 
 	.menu__link {
@@ -55,14 +63,11 @@
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 	background: var(--accent-color);
 	left: -20px;
 	top: 50%;
-	transform: translateY(-50%) scale(0);
-	transition: transform 0.25s ease;
 	z-index: -1;
-}
-
-.menu__link--active::before {
-	transform: translateY(-50%) scale(1);
 }

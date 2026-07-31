@@ -29,7 +29,7 @@
 }
 
 .page__body {
-	min-width: 375px;
+	min-width: 350px;
 	background-color: var(--bg-color);
 }
 
