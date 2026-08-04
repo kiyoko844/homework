@@ -1,5 +1,6 @@
 import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
+import { menuLinks } from "./menu.js";
 import { aboutSlider } from "./about-slider.js";
 import { advantages } from "./advantages.js";
 import { locations } from "./locations.js";
@@ -28,6 +29,8 @@ try {
 		},
 		headerFixed,
 	);
+	menuLinks();
+
 	aboutSlider();
 
 	advantages();

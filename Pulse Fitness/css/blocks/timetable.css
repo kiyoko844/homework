@@ -3,6 +3,26 @@
 	overflow: hidden;
 }
 
+.table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.timetable__nav {
+	position: relative;
+}
+
+.timetable__circle {
+	position: absolute;
+	top: 20%;
+	width: 41px;
+	height: 41px;
+	border-radius: 50%;
+	background: var(--accent-color);
+	transform: translateY(-50%);
+	transition: left 0.4s ease;
+}
+
 .timetable::before {
 	content: "";
 	position: absolute;
@@ -47,6 +67,15 @@
 	padding-bottom: 63px;
 }
 
+.timetable__list {
+	position: relative;
+	color: var(--main-color);
+}
+
+.timetable__button:hover {
+	transform: translateY(-2px);
+}
+
 .timetable__title {
 	padding-bottom: 67px;
 	font-family: var(--font-family);
@@ -59,6 +88,9 @@
 	position: relative;
 	display: inline-block;
 	opacity: 0.3;
+	transition:
+		color 0.3s ease,
+		transform 0.3s ease;
 }
 
 .timetable__button--active,
@@ -71,42 +103,6 @@
 
 .timetable__button--active {
 	opacity: 1;
-}
-
-.timetable__button::before {
-	content: "";
-	position: absolute;
-	left: -14px;
-	top: 50%;
-	-webkit-transform: translateY(-50%) scale(0);
-	-ms-transform: translateY(-50%) scale(0);
-	transform: translateY(-50%) scale(0);
-	width: 41px;
-	height: 41px;
-	border-radius: 50%;
-	background: var(--accent-color);
-	opacity: 0;
-	-webkit-transition:
-		opacity 0.3s ease,
-		-webkit-transform 0.3s ease;
-	transition:
-		opacity 0.3s ease,
-		-webkit-transform 0.3s ease;
-	transition:
-		opacity 0.3s ease,
-		transform 0.3s ease;
-	transition:
-		opacity 0.3s ease,
-		transform 0.3s ease,
-		-webkit-transform 0.3s ease;
-	z-index: -1;
-}
-
-.timetable__button--active::before {
-	opacity: 1;
-	-webkit-transform: translateY(-50%) scale(1);
-	-ms-transform: translateY(-50%) scale(1);
-	transform: translateY(-50%) scale(1);
 }
 
 .timetable__heading,
@@ -176,6 +172,14 @@
 	padding: 41px 30px 42px 21px;
 	border-left: none;
 	border-bottom: none;
+}
+
+.timetable__panel {
+	display: none;
+}
+
+.timetable__panel--active {
+	display: block;
 }
 
 .timetable__footer {
@@ -256,7 +260,7 @@
 	}
 
 	.table {
-		min-width: 900px;
+		min-width: 1200px;
 	}
 
 	.timetable__heading,
@@ -272,6 +276,12 @@
 
 	.timetable__trainer {
 		font-size: 14px;
+	}
+
+	.timetable__circle {
+		top: 20%;
+		width: 35px;
+		height: 35px;
 	}
 }
 
@@ -297,7 +307,7 @@
 	}
 
 	.table {
-		min-width: 800px;
+		min-width: 1200px;
 	}
 
 	.timetable__footer {
@@ -315,6 +325,12 @@
 	.timetable__footer-arrow {
 		width: 14px;
 		height: 14px;
+	}
+
+	.timetable__circle {
+		top: 12%;
+		width: 28px;
+		height: 28px;
 	}
 }
 
@@ -344,7 +360,7 @@
 	}
 
 	.table {
-		min-width: 700px;
+		min-width: 1200px;
 	}
 
 	.timetable__footer {
@@ -362,5 +378,9 @@
 	.timetable__footer-arrow {
 		width: 8px;
 		height: 8px;
+	}
+
+	.timetable__circle {
+		top: 12%;
 	}
 }

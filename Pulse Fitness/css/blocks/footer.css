@@ -74,6 +74,36 @@
 	gap: 45px;
 }
 
+.footer__social-link {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: var(--main-color);
+	-webkit-transition:
+		color 0.3s ease,
+		-webkit-transform 0.3s ease;
+	transition:
+		color 0.3s ease,
+		transform 0.3s ease;
+}
+
+.footer__social-link:hover {
+	color: var(--accent-color);
+	-webkit-transform: scale(1.15);
+	-ms-transform: scale(1.15);
+	transform: scale(1.15);
+}
+
+.footer-icon {
+	fill: currentColor;
+}
+
 .footer__title {
 	position: relative;
 	display: inline-block;

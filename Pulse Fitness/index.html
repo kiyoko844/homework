@@ -530,7 +530,7 @@
 					</div>
 					<div class="programs__cards">
 						<article class="programs__card">
-							<picture>
+							<picture class="programs__card-blur">
 								<source
 									srcset="./images/programs.img/programs-woman.webp"
 									type="image/webp"
@@ -551,7 +551,7 @@
 							<h3 class="programs__card-title">GYM DAY</h3>
 						</article>
 						<article class="programs__card">
-							<picture>
+							<picture class="programs__card-blur">
 								<source
 									srcset="./images/programs.img/programs.webp"
 									type="image/webp"
@@ -572,7 +572,7 @@
 							<h3 class="programs__card-title">CARDIO WORKOUT</h3>
 						</article>
 						<article class="programs__card">
-							<picture>
+							<picture class="programs__card-blur">
 								<source
 									srcset="./images/programs.img/programs-woman-2.webp"
 									type="image/webp"
@@ -594,14 +594,12 @@
 						</article>
 					</div>
 				</div>
-				<div class="programs__card-footer">
-					<a class="programs__footer-link" href="#">
-						<p class="programs__footer-text">VIEW FULL TIMETABLE</p>
-						<svg class="categories__card-arrow" width="21" height="21">
-							<use href="./icons/main-sprite.svg#arrow-right"></use>
-						</svg>
-					</a>
-				</div>
+				<a class="programs__card-footer programs__footer-link" href="#">
+					<p class="programs__footer-text">VIEW FULL TIMETABLE</p>
+					<svg class="categories__card-arrow" width="21" height="21">
+						<use href="./icons/main-sprite.svg#arrow-right"></use>
+					</svg>
+				</a>
 			</section>
 			<section class="testimonials">
 				<div class="testimonials__container">
@@ -660,15 +658,49 @@
 			<section class="advantages">
 				<div class="container advantages__container">
 					<div class="advantages__tabs">
-						<h2 class="advantages__title">PULSE</h2>
-						<button class="advantages__tab advantages__tab--active">
-							OUR STORY
+						<div class="advantages__circle"></div>
+						<button
+							class="advantages__title advantages__tab advantages__tab--active"
+						>
+							PULSE
 						</button>
+						<button class="advantages__tab">OUR STORY</button>
 						<button class="advantages__tab">APPROACH</button>
 						<button class="advantages__tab">OUR PLAN</button>
 					</div>
 					<div class="advantages__content">
 						<div class="advantages__panel advantages__panel--active">
+							<div class="advantages__item">
+								<h3 class="advantages__item-title">WHO WE ARE</h3>
+								<p class="advantages__item-description">
+									Pulse is a modern fitness community where people of all
+									experience levels come together to improve their strength,
+									health, and confidence. We combine expert coaching with an
+									inspiring atmosphere to help every member reach their full
+									potential.
+								</p>
+							</div>
+
+							<div class="advantages__item">
+								<h3 class="advantages__item-title">OUR VALUES</h3>
+								<p class="advantages__item-description">
+									We believe in consistency, respect, and continuous growth.
+									Every workout is an opportunity to become stronger, build
+									discipline, and create healthy habits that last a lifetime.
+								</p>
+							</div>
+
+							<div class="advantages__item">
+								<h3 class="advantages__item-title">WHY PULSE</h3>
+								<p class="advantages__item-description">
+									From premium equipment and experienced trainers to
+									personalized programs and a supportive community, Pulse
+									provides everything you need to enjoy your fitness journey and
+									achieve lasting results.
+								</p>
+							</div>
+						</div>
+						<div class="advantages__panel">
 							<div class="advantages__item">
 								<h3 class="advantages__item-title">BEST GYM</h3>
 								<p class="advantages__item-description">
@@ -772,7 +804,7 @@
 				<div class="services__container">
 					<div class="services__grid">
 						<div class="services__image">
-							<picture>
+							<picture class="services__image-blur">
 								<source
 									srcset="./images/services.img/services-img-1.webp"
 									type="image/webp"
@@ -796,7 +828,7 @@
 							<a class="service__card-link" href="#">READ MORE</a>
 						</article>
 						<div class="services__image">
-							<picture>
+							<picture class="services__image-blur">
 								<source
 									srcset="./images/services.img/services-img-2.webp"
 									type="image/webp"
@@ -830,8 +862,8 @@
 								<span class="services__card-read-more">READ MORE</span>
 							</a>
 						</article>
-						<div class="services__image services__image-blur">
-							<picture>
+						<div class="services__image">
+							<picture class="services__image-blur">
 								<source
 									srcset="./images/services.img/services-img-3.webp"
 									type="image/webp"
@@ -855,7 +887,7 @@
 							<a class="service__card-link" href="#">READ MORE</a>
 						</article>
 						<div class="services__image">
-							<picture>
+							<picture class="services__image-blur">
 								<source
 									srcset="./images/services.img/services-img-4.webp"
 									type="image/webp"
@@ -877,6 +909,7 @@
 					<div class="timetable__header">
 						<h2 class="timetable__title">CLASSES TIMETABLE</h2>
 						<nav class="timetable__nav">
+							<div class="timetable__circle"></div>
 							<ul class="timetable__list">
 								<li class="timetable__item timetable__item--active">
 									<button class="timetable__button timetable__button--active">
@@ -899,140 +932,645 @@
 						</nav>
 					</div>
 					<div class="timetable__table-wrapper">
-						<div class="timetable__table">
-							<table class="table">
-								<thead class="timetable__head">
-									<tr>
-										<th></th>
-										<th class="timetable__heading">MONDAY</th>
-										<th class="timetable__heading">TUESDAY</th>
-										<th class="timetable__heading">WEDNESDAY</th>
-										<th class="timetable__heading">THURSDAY</th>
-										<th class="timetable__heading">FRIDAY</th>
-										<th class="timetable__heading">SATURDAY</th>
-										<th class="timetable__heading">SUNDAY</th>
-									</tr>
-								</thead>
-								<tbody class="timetable__body">
-									<tr>
-										<td class="timetable__time">07:00 - 08:00</td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">FITNESS CLASS</h3>
-											<p class="timetable__trainer">Mark Thompson</p>
-										</td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">BOXING</h3>
-											<p class="timetable__trainer">Sarah Anderson</p>
-										</td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">OPEN GYM</h3>
-											<p class="timetable__trainer">Jessica Roberts</p>
-										</td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">BODYBUILDING</h3>
-											<p class="timetable__trainer">Michael Johnson</p>
-										</td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">OPEN GYM</h3>
-											<p class="timetable__trainer">Jessica Roberts</p>
-										</td>
-									</tr>
-									<tr>
-										<td class="timetable__time">08:00 - 09:00</td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">BOXING</h3>
-											<p class="timetable__trainer">Sarah Anderson</p>
-										</td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">BODYBUILDING</h3>
-											<p class="timetable__trainer">Michael Johnson</p>
-										</td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell" rowspan="2">
-											<h3 class="timetable__class-title">FITNESS CLASS</h3>
-											<p class="timetable__trainer">Mark Thompson</p>
-										</td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">BOXING</h3>
-											<p class="timetable__trainer">Sarah Anderson</p>
-										</td>
-										<td class="timetable__cell"></td>
-									</tr>
-									<tr>
-										<td class="timetable__time">09:00 - 10:00</td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell" rowspan="2">
-											<h3 class="timetable__class-title">BOXING</h3>
-											<p class="timetable__trainer">Sarah Anderson</p>
-										</td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell" rowspan="2">
-											<h3 class="timetable__class-title">BOXING</h3>
-											<p class="timetable__trainer">Sarah Anderson</p>
-										</td>
-									</tr>
-									<tr>
-										<td class="timetable__time">10:00 - 11:00</td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">OPEN GYM</h3>
-											<p class="timetable__trainer">Jessica Roberts</p>
-										</td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">BODYBUILDING</h3>
-											<p class="timetable__trainer">Michael Johnson</p>
-										</td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">FITNESS CLASS</h3>
-											<p class="timetable__trainer">Mark Thompson</p>
-										</td>
-									</tr>
-									<tr>
-										<td class="timetable__time">11:00 - 12:00</td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">BODYBUILDING</h3>
-											<p class="timetable__trainer">Michael Johnson</p>
-										</td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">BOXING</h3>
-											<p class="timetable__trainer">Sarah Anderson</p>
-										</td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">OPEN GYM</h3>
-											<p class="timetable__trainer">Jessica Roberts</p>
-										</td>
-										<td class="timetable__cell"></td>
-										<td class="timetable__cell">
-											<h3 class="timetable__class-title">FITNESS CLASS</h3>
-											<p class="timetable__trainer">Mark Thompson</p>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+						<div class="timetable__panel timetable__panel--active">
+							<div class="timetable__table">
+								<table class="table">
+									<thead class="timetable__head">
+										<tr>
+											<th></th>
+											<th class="timetable__heading">MONDAY</th>
+											<th class="timetable__heading">TUESDAY</th>
+											<th class="timetable__heading">WEDNESDAY</th>
+											<th class="timetable__heading">THURSDAY</th>
+											<th class="timetable__heading">FRIDAY</th>
+											<th class="timetable__heading">SATURDAY</th>
+											<th class="timetable__heading">SUNDAY</th>
+										</tr>
+									</thead>
+									<tbody class="timetable__body">
+										<tr>
+											<td class="timetable__time">07:00 - 08:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">FITNESS CLASS</h3>
+												<p class="timetable__trainer">Mark Thompson</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BOXING</h3>
+												<p class="timetable__trainer">Sarah Anderson</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">OPEN GYM</h3>
+												<p class="timetable__trainer">Jessica Roberts</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BODYBUILDING</h3>
+												<p class="timetable__trainer">Michael Johnson</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">OPEN GYM</h3>
+												<p class="timetable__trainer">Jessica Roberts</p>
+											</td>
+										</tr>
+										<tr>
+											<td class="timetable__time">08:00 - 09:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BOXING</h3>
+												<p class="timetable__trainer">Sarah Anderson</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BODYBUILDING</h3>
+												<p class="timetable__trainer">Michael Johnson</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">FITNESS CLASS</h3>
+												<p class="timetable__trainer">Mark Thompson</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BOXING</h3>
+												<p class="timetable__trainer">Sarah Anderson</p>
+											</td>
+											<td class="timetable__cell"></td>
+										</tr>
+										<tr>
+											<td class="timetable__time">09:00 - 10:00</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">BOXING</h3>
+												<p class="timetable__trainer">Sarah Anderson</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">BOXING</h3>
+												<p class="timetable__trainer">Sarah Anderson</p>
+											</td>
+										</tr>
+										<tr>
+											<td class="timetable__time">10:00 - 11:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">OPEN GYM</h3>
+												<p class="timetable__trainer">Jessica Roberts</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BODYBUILDING</h3>
+												<p class="timetable__trainer">Michael Johnson</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">FITNESS CLASS</h3>
+												<p class="timetable__trainer">Mark Thompson</p>
+											</td>
+										</tr>
+										<tr>
+											<td class="timetable__time">11:00 - 12:00</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BODYBUILDING</h3>
+												<p class="timetable__trainer">Michael Johnson</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BOXING</h3>
+												<p class="timetable__trainer">Sarah Anderson</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">OPEN GYM</h3>
+												<p class="timetable__trainer">Jessica Roberts</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">FITNESS CLASS</h3>
+												<p class="timetable__trainer">Mark Thompson</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="timetable__panel">
+							<div class="timetable__table">
+								<table class="table">
+									<thead class="timetable__head">
+										<tr>
+											<th></th>
+											<th class="timetable__heading">MONDAY</th>
+											<th class="timetable__heading">TUESDAY</th>
+											<th class="timetable__heading">WEDNESDAY</th>
+											<th class="timetable__heading">THURSDAY</th>
+											<th class="timetable__heading">FRIDAY</th>
+											<th class="timetable__heading">SATURDAY</th>
+											<th class="timetable__heading">SUNDAY</th>
+										</tr>
+									</thead>
+									<tbody class="timetable__body">
+										<tr>
+											<td class="timetable__time">07:00 - 08:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">YOGA FLOW</h3>
+												<p class="timetable__trainer">Emily Carter</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">HIIT TRAINING</h3>
+												<p class="timetable__trainer">Daniel Moore</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">STRETCHING</h3>
+												<p class="timetable__trainer">Olivia Brooks</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">CROSSFIT</h3>
+												<p class="timetable__trainer">Ryan Walker</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">PILATES</h3>
+												<p class="timetable__trainer">Sophia Green</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">08:00 - 09:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">SPINNING</h3>
+												<p class="timetable__trainer">Lucas Bennett</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">
+													FUNCTIONAL TRAINING
+												</h3>
+												<p class="timetable__trainer">Mia Collins</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">CORE WORKOUT</h3>
+												<p class="timetable__trainer">Noah Adams</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">KICKBOXING</h3>
+												<p class="timetable__trainer">Grace Wilson</p>
+											</td>
+											<td class="timetable__cell"></td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">09:00 - 10:00</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">POWER LIFTING</h3>
+												<p class="timetable__trainer">Ethan Cooper</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">CARDIO BLAST</h3>
+												<p class="timetable__trainer">Chloe Evans</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">10:00 - 11:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">MOBILITY</h3>
+												<p class="timetable__trainer">Liam Scott</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">TRX TRAINING</h3>
+												<p class="timetable__trainer">Ava Mitchell</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BOOTCAMP</h3>
+												<p class="timetable__trainer">Jacob Turner</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">11:00 - 12:00</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">ZUMBA</h3>
+												<p class="timetable__trainer">Ella Harris</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">ENDURANCE</h3>
+												<p class="timetable__trainer">Nathan Reed</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BARRE</h3>
+												<p class="timetable__trainer">Isabella King</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">
+													STRENGTH TRAINING
+												</h3>
+												<p class="timetable__trainer">Logan Parker</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="timetable__panel">
+							<div class="timetable__table">
+								<table class="table">
+									<thead class="timetable__head">
+										<tr>
+											<th></th>
+											<th class="timetable__heading">MONDAY</th>
+											<th class="timetable__heading">TUESDAY</th>
+											<th class="timetable__heading">WEDNESDAY</th>
+											<th class="timetable__heading">THURSDAY</th>
+											<th class="timetable__heading">FRIDAY</th>
+											<th class="timetable__heading">SATURDAY</th>
+											<th class="timetable__heading">SUNDAY</th>
+										</tr>
+									</thead>
+									<tbody class="timetable__body">
+										<tr>
+											<td class="timetable__time">07:00 - 08:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">MORNING CARDIO</h3>
+												<p class="timetable__trainer">Emma Watson</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">CIRCUIT TRAINING</h3>
+												<p class="timetable__trainer">James Miller</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">YOGA BASICS</h3>
+												<p class="timetable__trainer">Megan Lewis</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">POWER FITNESS</h3>
+												<p class="timetable__trainer">Chris Turner</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">PILATES CORE</h3>
+												<p class="timetable__trainer">Natalie Hill</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">08:00 - 09:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BODY PUMP</h3>
+												<p class="timetable__trainer">Andrew White</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">ABS & CORE</h3>
+												<p class="timetable__trainer">Sophie Adams</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">TOTAL BODY</h3>
+												<p class="timetable__trainer">Benjamin Clark</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BOX FIT</h3>
+												<p class="timetable__trainer">Rachel Morgan</p>
+											</td>
+											<td class="timetable__cell"></td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">09:00 - 10:00</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">WEIGHT TRAINING</h3>
+												<p class="timetable__trainer">David Foster</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">BOOTY WORKOUT</h3>
+												<p class="timetable__trainer">Victoria Ross</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">10:00 - 11:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BALANCE TRAINING</h3>
+												<p class="timetable__trainer">Henry Cooper</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">DANCE FITNESS</h3>
+												<p class="timetable__trainer">Olivia Reed</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">KETTLEBELL</h3>
+												<p class="timetable__trainer">Jack Bennett</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">11:00 - 12:00</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">AEROBICS</h3>
+												<p class="timetable__trainer">Charlotte Scott</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">MUSCLE BUILDING</h3>
+												<p class="timetable__trainer">Matthew Green</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BODY STRETCH</h3>
+												<p class="timetable__trainer">Anna Brooks</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">FIT CAMP</h3>
+												<p class="timetable__trainer">Samuel King</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="timetable__panel">
+							<div class="timetable__table">
+								<table class="table">
+									<thead class="timetable__head">
+										<tr>
+											<th></th>
+											<th class="timetable__heading">MONDAY</th>
+											<th class="timetable__heading">TUESDAY</th>
+											<th class="timetable__heading">WEDNESDAY</th>
+											<th class="timetable__heading">THURSDAY</th>
+											<th class="timetable__heading">FRIDAY</th>
+											<th class="timetable__heading">SATURDAY</th>
+											<th class="timetable__heading">SUNDAY</th>
+										</tr>
+									</thead>
+									<tbody class="timetable__body">
+										<tr>
+											<td class="timetable__time">07:00 - 08:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">FIT CAMP</h3>
+												<p class="timetable__trainer">Samuel King</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">YOGA BASICS</h3>
+												<p class="timetable__trainer">Megan Lewis</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BODY PUMP</h3>
+												<p class="timetable__trainer">Andrew White</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">PILATES CORE</h3>
+												<p class="timetable__trainer">Natalie Hill</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">CIRCUIT TRAINING</h3>
+												<p class="timetable__trainer">James Miller</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">08:00 - 09:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">KETTLEBELL</h3>
+												<p class="timetable__trainer">Jack Bennett</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">AEROBICS</h3>
+												<p class="timetable__trainer">Charlotte Scott</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">MORNING CARDIO</h3>
+												<p class="timetable__trainer">Emma Watson</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">MUSCLE BUILDING</h3>
+												<p class="timetable__trainer">Matthew Green</p>
+											</td>
+											<td class="timetable__cell"></td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">09:00 - 10:00</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">POWER FITNESS</h3>
+												<p class="timetable__trainer">Chris Turner</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">BOX FIT</h3>
+												<p class="timetable__trainer">Rachel Morgan</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">10:00 - 11:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BODY STRETCH</h3>
+												<p class="timetable__trainer">Anna Brooks</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BALANCE TRAINING</h3>
+												<p class="timetable__trainer">Henry Cooper</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">ABS & CORE</h3>
+												<p class="timetable__trainer">Sophie Adams</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">11:00 - 12:00</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">DANCE FITNESS</h3>
+												<p class="timetable__trainer">Olivia Reed</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">TOTAL BODY</h3>
+												<p class="timetable__trainer">Benjamin Clark</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">WEIGHT TRAINING</h3>
+												<p class="timetable__trainer">David Foster</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BOOTY WORKOUT</h3>
+												<p class="timetable__trainer">Victoria Ross</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="timetable__panel">
+							<div class="timetable__table">
+								<table class="table">
+									<thead class="timetable__head">
+										<tr>
+											<th></th>
+											<th class="timetable__heading">MONDAY</th>
+											<th class="timetable__heading">TUESDAY</th>
+											<th class="timetable__heading">WEDNESDAY</th>
+											<th class="timetable__heading">THURSDAY</th>
+											<th class="timetable__heading">FRIDAY</th>
+											<th class="timetable__heading">SATURDAY</th>
+											<th class="timetable__heading">SUNDAY</th>
+										</tr>
+									</thead>
+									<tbody class="timetable__body">
+										<tr>
+											<td class="timetable__time">07:00 - 08:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BOX FIT</h3>
+												<p class="timetable__trainer">Rachel Morgan</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">FIT CAMP</h3>
+												<p class="timetable__trainer">Samuel King</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">KETTLEBELL</h3>
+												<p class="timetable__trainer">Jack Bennett</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BODY STRETCH</h3>
+												<p class="timetable__trainer">Anna Brooks</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">MUSCLE BUILDING</h3>
+												<p class="timetable__trainer">Matthew Green</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">08:00 - 09:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">PILATES CORE</h3>
+												<p class="timetable__trainer">Natalie Hill</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BALANCE TRAINING</h3>
+												<p class="timetable__trainer">Henry Cooper</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">DANCE FITNESS</h3>
+												<p class="timetable__trainer">Olivia Reed</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">POWER FITNESS</h3>
+												<p class="timetable__trainer">Chris Turner</p>
+											</td>
+											<td class="timetable__cell"></td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">09:00 - 10:00</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">YOGA BASICS</h3>
+												<p class="timetable__trainer">Megan Lewis</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell" rowspan="2">
+												<h3 class="timetable__class-title">AEROBICS</h3>
+												<p class="timetable__trainer">Charlotte Scott</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">10:00 - 11:00</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">TOTAL BODY</h3>
+												<p class="timetable__trainer">Benjamin Clark</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">MORNING CARDIO</h3>
+												<p class="timetable__trainer">Emma Watson</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">CIRCUIT TRAINING</h3>
+												<p class="timetable__trainer">James Miller</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td class="timetable__time">11:00 - 12:00</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">ABS & CORE</h3>
+												<p class="timetable__trainer">Sophie Adams</p>
+											</td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BODY PUMP</h3>
+												<p class="timetable__trainer">Andrew White</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">BOOTY WORKOUT</h3>
+												<p class="timetable__trainer">Victoria Ross</p>
+											</td>
+											<td class="timetable__cell"></td>
+											<td class="timetable__cell">
+												<h3 class="timetable__class-title">WEIGHT TRAINING</h3>
+												<p class="timetable__trainer">David Foster</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="timetable__footer">
-					<a href="#" class="timetable__footer-link">
-						<p class="timetable__footer-text">VIEW FULL TIMETABLE</p>
-						<svg
-							class="timetable__footer-arrow"
-							width="21"
-							height="21"
-							aria-hidden="true"
-						>
-							<use href="./icons/main-sprite.svg#arrow-right"></use>
-						</svg>
-					</a>
-				</div>
+
+				<a class="timetable__footer-link timetable__footer" href="#">
+					<p class="timetable__footer-text">VIEW FULL TIMETABLE</p>
+					<svg
+						class="timetable__footer-arrow"
+						width="21"
+						height="21"
+						aria-hidden="true"
+					>
+						<use href="./icons/main-sprite.svg#arrow-right"></use>
+					</svg>
+				</a>
 			</section>
 			<section class="video">
 				<div class="video__container">
@@ -1299,7 +1837,7 @@
 					</div>
 					<div class="trainers__cards">
 						<article class="trainers__card">
-							<picture>
+							<picture class="trainers__card-picture">
 								<source
 									srcset="./images/trainers.img/trainer-woman-1.webp"
 									type="image/webp"
@@ -1325,14 +1863,14 @@
 							<h3 class="trainers__card-name">Sarah Anderson</h3>
 						</article>
 						<article class="trainers__card">
-							<div class="trainers__card-image trainers__card-image-blur">
-								<picture>
+							<div class="trainers__card-image">
+								<picture class="trainers__card-picture">
 									<source
 										srcset="./images/trainers.img/coach-man-1.webp"
 										type="image/webp"
 									/>
 									<img
-										class=""
+										class="trainers__card-image"
 										width="393"
 										height="488"
 										src="./images/trainers.img/coach-man-1.png"
@@ -1341,7 +1879,6 @@
 									/>
 								</picture>
 							</div>
-
 							<a class="trainers__badge" href="#" aria-label="Twitter">
 								<svg class="trainers__icon" width="20" height="17">
 									<use href="./icons/twitter.svg"></use>
@@ -1354,7 +1891,7 @@
 							<h3 class="trainers__card-name">Mark Thompson</h3>
 						</article>
 						<article class="trainers__card">
-							<picture>
+							<picture class="trainers__card-picture">
 								<source
 									srcset="./images/trainers.img/trainer-woman-2.webp"
 									type="image/webp"
@@ -1380,7 +1917,7 @@
 							<h3 class="trainers__card-name">Jessica Roberts</h3>
 						</article>
 						<article class="trainers__card">
-							<picture>
+							<picture class="trainers__card-picture">
 								<source
 									srcset="./images/trainers.img/coach-man-2.webp"
 									type="image/webp"

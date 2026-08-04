@@ -19,6 +19,22 @@
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	z-index: 1;
+	animation: flip 4s ease-in-out infinite;
+	transform-style: preserve-3d;
+}
+
+@keyframes flip {
+	0% {
+		transform: translate(-50%, -50%) rotateY(0deg);
+	}
+
+	50% {
+		transform: translate(-50%, -50%) rotateY(180deg);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotateY(360deg);
+	}
 }
 
 .testimonials__content {
@@ -267,8 +283,8 @@
 
 @media (width <= 480px) {
 	.testimonials__badge {
-		width: 70px;
-		height: 70px;
+		width: 80px;
+		height: 80px;
 	}
 
 	.testimonials__quote-icon {
@@ -299,11 +315,6 @@
 }
 
 @media (width <= 392px) {
-	.testimonials__badge {
-		width: 60px;
-		height: 60px;
-	}
-
 	.testimonials__quote-icon {
 		width: 18px;
 		height: 18px;

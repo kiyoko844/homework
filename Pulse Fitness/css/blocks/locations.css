@@ -245,7 +245,7 @@
 	}
 
 	.locations__title {
-		font-size: 22px;
+		font-size: 28px;
 		text-align: center;
 	}
 
@@ -279,6 +279,10 @@
 		margin-bottom: 0;
 	}
 
+	.locations__description {
+		margin-block: 8px;
+	}
+
 	.locations__button::before {
 		top: 30%;
 		left: 75px;
@@ -290,7 +294,6 @@
 		margin-bottom: 6px;
 		font-size: 10px;
 	}
-
 	.locations__card-value {
 		font-size: 12px;
 	}
@@ -311,22 +314,14 @@
 		padding: 20px 0;
 	}
 
-	.locations__title {
-		font-size: 18px;
-	}
-
 	.locations__hours {
 		margin-right: 22px;
 		font-size: 8px;
 	}
 
-	.locations__city {
-		font-size: 12px;
-	}
-
 	.locations__button--default::before {
-		top: 31%;
-		left: 53px;
+		top: 32%;
+		left: 54px;
 		width: 18px;
 		height: 18px;
 	}
@@ -347,23 +342,10 @@
 	}
 
 	.locations__button::before {
-		top: 31%;
-		left: 53px;
+		top: 32%;
+		left: 54px;
 		width: 18px;
 		height: 18px;
-	}
-
-	.locations__card-title {
-		margin-bottom: 6px;
-		font-size: 6px;
-	}
-
-	.locations__card-value {
-		font-size: 8px;
-	}
-
-	.locations__text {
-		font-size: 6px;
 	}
 }
 
