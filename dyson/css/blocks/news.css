@@ -1,0 +1,129 @@
+.news {
+	background-color: var(--main-color);
+}
+.news__container {
+	padding-block: 150px;
+}
+
+.news__title {
+	margin-bottom: 70px;
+	font-family: var(--second-family);
+	font-weight: 900;
+	font-size: 42px;
+	color: var(--bg-color);
+}
+
+.news__card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	column-gap: 20px;
+	row-gap: 50px;
+}
+
+.news__card-image {
+	margin-bottom: 30px;
+}
+
+.news__card-date {
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 150%;
+	color: var(--color-date);
+}
+
+.news__card-title {
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 120%;
+	color: var(--bg-color);
+}
+
+.news__card-description {
+	margin-bottom: 20px;
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 120%;
+	color: var(--bg-color);
+}
+
+.news__card-more {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 18px;
+	color: var(--accent-color);
+	border-bottom: 1px solid var(--accent-color);
+}
+
+.news__more-icon {
+	transition: transform 0.3s ease;
+}
+
+.news__more-icon--up {
+	transform: rotate(180deg);
+}
+
+.news__footer {
+	margin-top: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.news__more-link {
+	border: 1px solid var(--bg-color);
+	border-radius: 3px;
+	padding: 10px 10px 10px 20px;
+	width: 311px;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	color: var(--bg-color);
+	background-color: transparent;
+	transition: all 0.3s ease;
+}
+
+.news__more-link:hover {
+	color: var(--accent-color);
+	border-color: var(--accent-color);
+	transform: translateY(-2px);
+}
+
+.news__more-text {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 24px;
+	color: inherit;
+}
+
+.news--hidden {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	filter: blur(8px);
+	transform: translateY(-20px);
+	pointer-events: none;
+}
+
+.news--show {
+	opacity: 1;
+	max-height: 1000px;
+	filter: blur(0);
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+.news--hidden,
+.news--show {
+	transition:
+		opacity 0.5s ease,
+		max-height 0.5s ease,
+		filter 0.5s ease,
+		transform 0.5s ease;
+}
