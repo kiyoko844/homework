@@ -4,25 +4,35 @@ export default function Reviews() {
 	const moreText = document.querySelector(".reviews__more-text");
 	const moreIcon = document.querySelector(".reviews__more-icon");
 
-	if (!moreLink || !hiddenReviews.length) {
-		return;
+	if (moreLink && hiddenReviews.length) {
+		moreLink.addEventListener("click", () => {
+			const isOpen = hiddenReviews[0].classList.contains("review--visible");
+
+			hiddenReviews.forEach((review) => {
+				review.classList.toggle("review--visible", !isOpen);
+			});
+
+			moreText.textContent = isOpen ? "Показать еще" : "Скрыть отзывы";
+
+			moreIcon.classList.toggle("reviews__more-icon--up", !isOpen);
+		});
 	}
 
-	moreLink.addEventListener("click", (event) => {
-		event.preventDefault();
+	const photoLinks = document.querySelectorAll(".review__photos-link");
 
-		const isHidden = hiddenReviews[0].classList.contains("review--hidden");
+	photoLinks.forEach((link) => {
+		link.addEventListener("click", () => {
+			const photos = link
+				.closest(".review__content")
+				.querySelectorAll(".review__photo--hidden");
 
-		hiddenReviews.forEach((review) => {
-			review.classList.toggle("review--hidden");
+			const isOpen = photos[0]?.classList.contains("review__photo--visible");
+
+			photos.forEach((photo) => {
+				photo.classList.toggle("review__photo--visible", !isOpen);
+			});
+
+			link.textContent = isOpen ? "Показать еще" : "Скрыть";
 		});
-
-		if (isHidden) {
-			moreText.textContent = "Скрыть отзывы";
-			moreIcon.classList.add("reviews__more-icon--up");
-		} else {
-			moreText.textContent = "Показать еще";
-			moreIcon.classList.remove("reviews__more-icon--up");
-		}
 	});
 }

@@ -29,9 +29,9 @@
 
     <symbol id="cross" viewBox="0 0 50 50">
         <path
-            d="M18 6L6 18M6 6L18 18"
+            d="M15 15L35 35M35 15L15 35"
             stroke="currentColor"
-            stroke-width="2"
+            stroke-width="2.5"
             stroke-linecap="round"
             stroke-linejoin="round"
         />

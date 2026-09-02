@@ -2,6 +2,7 @@ import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
 import SpecialOffers from "./special.offers.js";
 import Reviews from "./reviews.js";
+import Modal from "./modal.js";
 import News from "./news.js";
 
 try {
@@ -30,6 +31,12 @@ try {
 	SpecialOffers();
 
 	Reviews();
+
+	new Modal({
+		MODAL_WRAPPER: "modal",
+		PAGE_BODY: "page__body",
+		PAGE_BODY_NO_SCROLL: "page__body--no-scroll",
+	});
 
 	News();
 } catch (error) {
