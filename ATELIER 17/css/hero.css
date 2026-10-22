@@ -1,0 +1,213 @@
+.hero {
+	position: relative;
+	width: 100%;
+	height: 100svh;
+	min-height: 680px;
+	overflow: hidden;
+	background: #15120f;
+	color: #e8e0d5;
+}
+
+.hero__scene {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	isolation: isolate;
+}
+
+.hero__image {
+	position: absolute;
+	inset: -7%;
+	z-index: -2;
+	will-change: transform;
+}
+
+.hero__image img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	object-position: center;
+	transform: scale(1.02);
+	filter: brightness(0.72) saturate(0.82);
+}
+
+.hero__scene::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background:
+		linear-gradient(
+			90deg,
+			rgba(10, 8, 6, 0.48),
+			transparent 42%,
+			rgba(10, 8, 6, 0.2)
+		),
+		linear-gradient(
+			0deg,
+			rgba(10, 8, 6, 0.5),
+			transparent 35%,
+			rgba(10, 8, 6, 0.16)
+		);
+	pointer-events: none;
+}
+
+.hero__grain {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	opacity: 0.08;
+	pointer-events: none;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+	mix-blend-mode: soft-light;
+}
+
+.hero__title {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	transform: translate(-50%, -50%);
+	font-family: "Cormorant Garamond", serif;
+	font-weight: 400;
+	font-size: clamp(7rem, 17vw, 17rem);
+	line-height: 0.68;
+	letter-spacing: -0.075em;
+	white-space: nowrap;
+	will-change: transform;
+}
+
+.hero__title span:last-child {
+	align-self: flex-end;
+	margin-top: 18px;
+	margin-right: -0.05em;
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 0.39em;
+	line-height: 0.8;
+	letter-spacing: -0.08em;
+}
+
+.hero__details {
+	position: absolute;
+	left: 42px;
+	bottom: 38px;
+	z-index: 4;
+	display: flex;
+	gap: 34px;
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 9px;
+	letter-spacing: 0.14em;
+}
+
+.hero__reservation {
+	position: absolute;
+	right: 42px;
+	bottom: 35px;
+	z-index: 4;
+	display: flex;
+	align-items: center;
+	gap: 26px;
+	padding-bottom: 9px;
+	border-bottom: 1px solid rgba(232, 224, 213, 0.65);
+	color: #e8e0d5;
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 9px;
+	letter-spacing: 0.14em;
+	text-decoration: none;
+	transition:
+		gap 0.35s ease,
+		border-color 0.35s ease;
+}
+
+.hero__reservation span:last-child {
+	font-size: 15px;
+	line-height: 1;
+}
+
+.hero__reservation:hover {
+	gap: 40px;
+	border-color: #e8e0d5;
+}
+
+@media (max-width: 900px) {
+	.hero__title {
+		font-size: clamp(6rem, 18vw, 11rem);
+	}
+
+	.hero__details {
+		left: 28px;
+		bottom: 28px;
+	}
+
+	.hero__reservation {
+		right: 28px;
+		bottom: 25px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		min-height: 100svh;
+	}
+
+	.hero__image {
+		inset: 0;
+	}
+
+	.hero__image img {
+		object-position: center;
+		filter: brightness(0.68) saturate(0.8);
+	}
+
+	.hero__scene::after {
+		background: linear-gradient(
+			0deg,
+			rgba(10, 8, 6, 0.62),
+			transparent 48%,
+			rgba(10, 8, 6, 0.2)
+		);
+	}
+
+	.hero__title {
+		font-size: clamp(5rem, 24vw, 9rem);
+	}
+
+	.hero__details {
+		left: 18px;
+		bottom: 24px;
+		gap: 18px;
+		font-size: 8px;
+	}
+
+	.hero__reservation {
+		right: 18px;
+		bottom: 21px;
+		font-size: 8px;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero__title {
+		font-size: 25vw;
+	}
+
+	.hero__details {
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.hero__reservation {
+		gap: 16px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero__image,
+	.hero__title {
+		transform: none !important;
+	}
+}

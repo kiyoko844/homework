@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ATELIER 17 — Restaurant & Wine Bar</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/hero.css" />
+		<link rel="stylesheet" href="css/menu.css" />
+		<link rel="stylesheet" href="css/table-section.css" />
+		<link rel="stylesheet" href="css/cellar-section.css" />
+		<link rel="stylesheet" href="css/kitchen-section.css" />
+		<link rel="stylesheet" href="css/reservation.css" />
+	</head>
+
+	<body>
+		<header class="header" id="header">
+			<div class="header__inner">
+				<a class="header__logo" href="#top" aria-label="ATELIER 17">
+					<span class="header__logo-main">ATELIER</span>
+					<span class="header__logo-number">17</span>
+				</a>
+
+				<div class="header__meta">
+					<span>RESTAURANT</span>
+					<span>&</span>
+					<span>WINE BAR</span>
+				</div>
+
+				<div class="header__actions">
+					<button
+						class="header__search"
+						type="button"
+						id="searchButton"
+						aria-label="Search sections"
+						aria-expanded="false"
+					>
+						<span class="header__search-icon"></span>
+						<span class="header__search-label">SEARCH</span>
+					</button>
+
+					<button
+						class="header__menu"
+						type="button"
+						id="menuButton"
+						aria-label="Open menu"
+						aria-expanded="false"
+					>
+						<span class="header__menu-label">MENU</span>
+
+						<span class="header__menu-lines">
+							<span></span>
+							<span></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<div class="menu" id="siteMenu" aria-hidden="true">
+			<div class="menu__backdrop" id="menuBackdrop"></div>
+
+			<div class="menu__panel">
+				<div class="menu__top">
+					<div class="menu__brand">
+						<span>ATELIER 17</span>
+						<small>RESTAURANT & WINE BAR</small>
+					</div>
+
+					<button
+						class="menu__close"
+						type="button"
+						id="menuClose"
+						aria-label="Close menu"
+					>
+						<span>CLOSE</span>
+						<span class="menu__close-icon">
+							<i></i>
+							<i></i>
+						</span>
+					</button>
+				</div>
+
+				<div class="menu__content">
+					<div class="menu__navigation">
+						<span class="menu__eyebrow">NAVIGATION / 01</span>
+
+						<nav class="menu__links" id="menuLinks">
+							<a href="#top" data-section="home">
+								<span class="menu__index">00</span>
+								<span class="menu__title">HOME</span>
+							</a>
+
+							<a href="#menu" data-section="menu">
+								<span class="menu__index">01</span>
+								<span class="menu__title">THE MENU</span>
+							</a>
+
+							<a href="#table" data-section="table">
+								<span class="menu__index">02</span>
+								<span class="menu__title">THE TABLE</span>
+							</a>
+
+							<a href="#cellar" data-section="cellar">
+								<span class="menu__index">03</span>
+								<span class="menu__title">THE CELLAR</span>
+							</a>
+
+							<a href="#kitchen" data-section="kitchen">
+								<span class="menu__index">04</span>
+								<span class="menu__title">THE KITCHEN</span>
+							</a>
+
+							<a href="#reservation" data-section="reservation">
+								<span class="menu__index">05</span>
+								<span class="menu__title">RESERVATION</span>
+							</a>
+						</nav>
+					</div>
+
+					<div class="menu__side">
+						<div class="menu__search">
+							<label for="menuSearch">FIND A SECTION</label>
+
+							<div class="menu__search-field">
+								<input
+									type="text"
+									id="menuSearch"
+									placeholder="Type to search..."
+									autocomplete="off"
+								/>
+
+								<span class="menu__search-key">⌘ K</span>
+							</div>
+
+							<div class="menu__search-results" id="menuSearchResults"></div>
+						</div>
+
+						<div class="menu__info">
+							<div>
+								<span>OPENING HOURS</span>
+								<p>17:00 — 01:00</p>
+							</div>
+
+							<div>
+								<span>LOCATION</span>
+								<p>MOSCOW / 17</p>
+							</div>
+
+							<div>
+								<span>CONTACT</span>
+								<p>+7 000 000 17 17</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu__bottom">
+					<span>ATELIER 17 / 2026</span>
+
+					<span> GOOD FOOD · GOOD WINE · LONG EVENINGS </span>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<section class="hero" id="top">
+				<div class="hero__scene">
+					<div class="hero__image hero__image--back">
+						<img src="./images/hero.jpeg" alt="ATELIER 17 dining table" />
+					</div>
+
+					<div class="hero__grain"></div>
+
+					<div class="hero__title">
+						<span>ATELIER</span>
+						<span>17</span>
+					</div>
+
+					<div class="hero__details">
+						<span>MOSCOW</span>
+						<span>17:00 — 01:00</span>
+					</div>
+
+					<a class="hero__reservation" href="#reservation">
+						<span>RESERVE</span>
+						<span></span>
+					</a>
+				</div>
+			</section>
+
+			<section class="restaurant-menu" id="menu">
+				<div class="restaurant-menu__header">
+					<div class="restaurant-menu__index">01</div>
+
+					<div class="restaurant-menu__heading">
+						<span>ATELIER 17 / DINING</span>
+						<h2>THE MENU</h2>
+					</div>
+
+					<div class="restaurant-menu__meta">
+						<span>DINNER</span>
+						<span>17:00 — 01:00</span>
+					</div>
+				</div>
+
+				<div class="restaurant-menu__hero">
+					<div class="restaurant-menu__hero-image">
+						<img src="./images/menu.jpeg" alt="ATELIER 17 restaurant table" />
+					</div>
+
+					<div class="restaurant-menu__hero-caption">
+						<span>SEASONAL / 2026</span>
+						<span>01 — 04</span>
+					</div>
+				</div>
+
+				<div class="restaurant-menu__grid">
+					<div class="restaurant-menu__column">
+						<div class="restaurant-menu__category">
+							<div class="restaurant-menu__category-head">
+								<h3>STARTERS</h3>
+								<span>04</span>
+							</div>
+
+							<div class="restaurant-menu__items">
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>OYSTER</h4>
+										<p>cucumber · green apple · dill</p>
+									</div>
+
+									<span class="menu-item__price">850 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>BEEF TARTARE</h4>
+										<p>capers · mustard · smoked yolk</p>
+									</div>
+
+									<span class="menu-item__price">1 150 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>CEVICHE</h4>
+										<p>sea bass · citrus · coriander</p>
+									</div>
+
+									<span class="menu-item__price">1 150 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>STRACCIATELLA</h4>
+										<p>tomato · basil · olive oil</p>
+									</div>
+
+									<span class="menu-item__price">950 ₽</span>
+								</article>
+							</div>
+						</div>
+
+						<div class="restaurant-menu__category">
+							<div class="restaurant-menu__category-head">
+								<h3>PASTA</h3>
+								<span>04</span>
+							</div>
+
+							<div class="restaurant-menu__items">
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>TAGLIOLINI</h4>
+										<p>parmesan · black pepper · butter</p>
+									</div>
+
+									<span class="menu-item__price">1 250 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>RAVIOLI</h4>
+										<p>brown butter · sage · ricotta</p>
+									</div>
+
+									<span class="menu-item__price">1 350 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>PAPPARDELLE</h4>
+										<p>duck ragù · pecorino · herbs</p>
+									</div>
+
+									<span class="menu-item__price">1 550 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>LASAGNA</h4>
+										<p>tomato · mozzarella · basil</p>
+									</div>
+
+									<span class="menu-item__price">1 200 ₽</span>
+								</article>
+							</div>
+						</div>
+					</div>
+
+					<div class="restaurant-menu__column">
+						<div class="restaurant-menu__category">
+							<div class="restaurant-menu__category-head">
+								<h3>MAINS</h3>
+								<span>05</span>
+							</div>
+
+							<div class="restaurant-menu__items">
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>OCTOPUS</h4>
+										<p>white bean · lemon · herbs</p>
+									</div>
+
+									<span class="menu-item__price">1 450 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>DUCK BREAST</h4>
+										<p>cherry · black garlic · jus</p>
+									</div>
+
+									<span class="menu-item__price">1 850 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>SEA BASS</h4>
+										<p>fennel · beurre blanc · capers</p>
+									</div>
+
+									<span class="menu-item__price">1 750 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>SHORT RIB</h4>
+										<p>celeriac · red wine · thyme</p>
+									</div>
+
+									<span class="menu-item__price">1 950 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>CHICKEN</h4>
+										<p>morels · potato · jus</p>
+									</div>
+
+									<span class="menu-item__price">1 550 ₽</span>
+								</article>
+							</div>
+						</div>
+
+						<div class="restaurant-menu__category">
+							<div class="restaurant-menu__category-head">
+								<h3>DESSERT</h3>
+								<span>05</span>
+							</div>
+
+							<div class="restaurant-menu__items">
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>DARK CHOCOLATE</h4>
+										<p>cherry · sea salt · olive oil</p>
+									</div>
+
+									<span class="menu-item__price">850 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>BASQUE CHEESECAKE</h4>
+										<p>vanilla · sour cream · berry</p>
+									</div>
+
+									<span class="menu-item__price">750 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>FIG</h4>
+										<p>honey · mascarpone · walnut</p>
+									</div>
+
+									<span class="menu-item__price">800 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>AFFOGATO</h4>
+										<p>vanilla gelato · espresso</p>
+									</div>
+
+									<span class="menu-item__price">650 ₽</span>
+								</article>
+
+								<article class="menu-item">
+									<div class="menu-item__main">
+										<h4>CHEESE</h4>
+										<p>seasonal selection · fruit · honey</p>
+									</div>
+
+									<span class="menu-item__price">1 100 ₽</span>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="restaurant-menu__footer">
+					<span>MENU CHANGES WITH THE SEASON</span>
+
+					<a href="#reservation">
+						RESERVE A TABLE
+						<span></span>
+					</a>
+				</div>
+			</section>
+
+			<section class="table-section" id="table">
+				<div class="table-section__top">
+					<div class="table-section__title-wrap">
+						<span>ATELIER 17 / THE SPACE</span>
+						<h2>THE TABLE</h2>
+					</div>
+				</div>
+
+				<div class="table-section__visual">
+					<div class="table-section__image">
+						<img
+							src="./images/table-section/table.jpeg"
+							alt="ATELIER 17 dining room"
+						/>
+					</div>
+
+					<div class="table-section__stamp">
+						<span>ATELIER</span>
+						<strong>17</strong>
+					</div>
+				</div>
+
+				<div class="table-section__intro">
+					<p class="table-section__intro-label">THE EVENING BEGINS HERE</p>
+
+					<p class="table-section__intro-text">
+						A room built around the table. Warm light, dark timber, quiet
+						conversation and a kitchen that stays close to the dining room.
+					</p>
+				</div>
+
+				<div class="table-section__details">
+					<article class="table-detail">
+						<div class="table-detail__number">01</div>
+
+						<div class="table-detail__image">
+							<img
+								src="./images/table-section/table-detail-01.jpeg"
+								alt="ATELIER 17 table setting"
+							/>
+						</div>
+
+						<div class="table-detail__content">
+							<span>THE SETTING</span>
+							<h3>ONE TABLE.<br />ONE EVENING.</h3>
+						</div>
+					</article>
+
+					<article class="table-detail">
+						<div class="table-detail__number">02</div>
+
+						<div class="table-detail__image">
+							<img
+								src="./images/table-section/table-detail-02.jpeg"
+								alt="ATELIER 17 restaurant interior"
+							/>
+						</div>
+
+						<div class="table-detail__content">
+							<span>THE LIGHT</span>
+							<h3>AFTER<br />DARK.</h3>
+						</div>
+					</article>
+
+					<article class="table-detail">
+						<div class="table-detail__number">03</div>
+
+						<div class="table-detail__image">
+							<img
+								src="./images/table-section/table-detail-03.jpeg"
+								alt="ATELIER 17 wine and table"
+							/>
+						</div>
+
+						<div class="table-detail__content">
+							<span>THE MOMENT</span>
+							<h3>STAY A<br />LITTLE LONGER.</h3>
+						</div>
+					</article>
+				</div>
+
+				<div class="table-section__footer">
+					<span>DINNER / WINE / CONVERSATION</span>
+
+					<a href="#reservation">
+						FIND YOUR TABLE
+						<span></span>
+					</a>
+				</div>
+			</section>
+
+			<section class="cellar-section" id="cellar">
+				<div class="cellar-section__top">
+					<span>ATELIER 17 / WINE</span>
+					<h2>THE CELLAR</h2>
+				</div>
+
+				<div class="cellar-section__visual">
+					<div class="cellar-section__image">
+						<img src="./images/cellar.jpeg" alt="ATELIER 17 wine cellar" />
+					</div>
+
+					<div class="cellar-section__mark">
+						<span>WINE</span>
+						<strong>17</strong>
+					</div>
+
+					<div class="cellar-section__caption">
+						<span>2026</span>
+						<span>SELECTED BOTTLES</span>
+					</div>
+				</div>
+
+				<div class="cellar-section__list">
+					<div class="cellar-section__list-head">
+						<span>01 — 03</span>
+						<span>THE SELECTION</span>
+					</div>
+
+					<article class="wine-item">
+						<span class="wine-item__number">01</span>
+
+						<div class="wine-item__name">
+							<span>BURGUNDY / FRANCE</span>
+							<h3>BOURGOGNE ROUGE</h3>
+						</div>
+
+						<span class="wine-item__year">2022</span>
+
+						<span class="wine-item__price">8 900 ₽</span>
+					</article>
+
+					<article class="wine-item">
+						<span class="wine-item__number">02</span>
+
+						<div class="wine-item__name">
+							<span>TUSCANY / ITALY</span>
+							<h3>ROSSO DI MONTALCINO</h3>
+						</div>
+
+						<span class="wine-item__year">2021</span>
+
+						<span class="wine-item__price">9 600 ₽</span>
+					</article>
+
+					<article class="wine-item">
+						<span class="wine-item__number">03</span>
+
+						<div class="wine-item__name">
+							<span>RIOJA / SPAIN</span>
+							<h3>RIOJA RESERVA</h3>
+						</div>
+
+						<span class="wine-item__year">2019</span>
+
+						<span class="wine-item__price">7 600 ₽</span>
+					</article>
+				</div>
+			</section>
+
+			<section class="kitchen-section" id="kitchen">
+				<div class="kitchen-section__top">
+					<span>ATELIER 17 / CRAFT</span>
+
+					<div class="kitchen-section__title">
+						<span>04</span>
+						<h2>THE<br />KITCHEN</h2>
+					</div>
+
+					<span>OPEN / EVENING</span>
+				</div>
+
+				<div class="kitchen-section__visual">
+					<div class="kitchen-section__image">
+						<img src="./images/kitchen.jpeg" alt="ATELIER 17 kitchen" />
+					</div>
+
+					<div class="kitchen-section__word">KITCHEN</div>
+
+					<div class="kitchen-section__label">
+						<span>ATELIER 17</span>
+						<span>FROM FIRE<br />TO TABLE</span>
+					</div>
+				</div>
+
+				<div class="kitchen-section__bottom">
+					<div class="kitchen-section__line"></div>
+
+					<div class="kitchen-section__detail">
+						<span>01</span>
+						<p>FIRE</p>
+					</div>
+
+					<div class="kitchen-section__detail">
+						<span>02</span>
+						<p>SEASON</p>
+					</div>
+
+					<div class="kitchen-section__detail">
+						<span>03</span>
+						<p>CRAFT</p>
+					</div>
+
+					<div class="kitchen-section__detail">
+						<span>04</span>
+						<p>SERVICE</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="reservation-section" id="reservation">
+				<div class="reservation-section__image">
+					<img src="./images/reservation.jpeg" alt="ATELIER 17 evening table" />
+				</div>
+
+				<div class="reservation-section__overlay"></div>
+
+				<div class="reservation-section__content">
+					<div class="reservation-section__top">
+						<span>ATELIER 17</span>
+						<span>05 / RESERVATION</span>
+					</div>
+
+					<div class="reservation-section__center">
+						<span>THE LAST TABLE</span>
+
+						<h2>
+							SEE YOU<br />
+							AFTER DARK.
+						</h2>
+
+						<button
+							class="reservation-section__button"
+							type="button"
+							data-booking-open
+						>
+							<span>RESERVE A TABLE</span>
+							<span></span>
+						</button>
+					</div>
+
+					<div class="reservation-section__bottom">
+						<span>MOSCOW</span>
+						<span>17:00 — 01:00</span>
+					</div>
+				</div>
+
+				<div class="booking-modal" data-booking-modal>
+					<div class="booking-modal__backdrop" data-booking-close></div>
+
+					<div class="booking-modal__card">
+						<button
+							class="booking-modal__close"
+							type="button"
+							data-booking-close
+							aria-label="Close"
+						>
+							<span></span>
+							<span></span>
+						</button>
+
+						<div class="booking-modal__header">
+							<div>
+								<span>ATELIER 17</span>
+								<strong>RESERVATION</strong>
+							</div>
+						</div>
+
+						<div class="booking-modal__title">
+							<span>YOUR TABLE</span>
+							<h3>Reserve<br />your evening.</h3>
+						</div>
+
+						<form class="booking-form">
+							<div class="booking-form__grid">
+								<label class="booking-field">
+									<span>DATE</span>
+
+									<input type="date" name="date" required />
+								</label>
+
+								<label class="booking-field">
+									<span>TIME</span>
+
+									<select name="time" required>
+										<option value="" selected disabled>Select time</option>
+										<option value="17:00">17:00</option>
+										<option value="18:00">18:00</option>
+										<option value="19:00">19:00</option>
+										<option value="20:00">20:00</option>
+										<option value="21:00">21:00</option>
+										<option value="22:00">22:00</option>
+										<option value="23:00">23:00</option>
+									</select>
+								</label>
+
+								<label class="booking-field">
+									<span>GUESTS</span>
+
+									<select name="guests" required>
+										<option value="1">1 guest</option>
+										<option value="2" selected>2 guests</option>
+										<option value="3">3 guests</option>
+										<option value="4">4 guests</option>
+										<option value="5">5 guests</option>
+										<option value="6">6 guests</option>
+										<option value="7">7 guests</option>
+										<option value="8">8 guests</option>
+									</select>
+								</label>
+
+								<label class="booking-field">
+									<span>NAME</span>
+
+									<input
+										type="text"
+										name="name"
+										placeholder="Your name"
+										required
+									/>
+								</label>
+
+								<label class="booking-field booking-field--full">
+									<span>PHONE</span>
+
+									<input type="tel" name="phone" placeholder="+7" required />
+								</label>
+							</div>
+
+							<div class="booking-form__bottom">
+								<p>
+									Your reservation request will be<br />
+									confirmed by our team.
+								</p>
+
+								<button class="booking-form__submit" type="submit">
+									<span>CONFIRM RESERVATION</span>
+									<span></span>
+								</button>
+							</div>
+						</form>
+
+						<div class="booking-success" data-booking-success>
+							<div class="booking-success__mark">
+								<span></span>
+								<span></span>
+							</div>
+
+							<span class="booking-success__label">
+								ATELIER 17 / CONFIRMED
+							</span>
+
+							<h3>We'll be waiting<br />for you.</h3>
+
+							<div class="booking-success__details">
+								<div>
+									<span>DATE</span>
+									<strong data-confirm-date>—</strong>
+								</div>
+
+								<div>
+									<span>TIME</span>
+									<strong data-confirm-time>—</strong>
+								</div>
+
+								<div>
+									<span>GUESTS</span>
+									<strong data-confirm-guests>—</strong>
+								</div>
+							</div>
+
+							<button
+								class="booking-success__close"
+								type="button"
+								data-success-close
+							>
+								DONE
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="reservation-confirmation" data-booking-confirmation>
+					<div class="reservation-confirmation__inner">
+						<span class="reservation-confirmation__label">
+							ATELIER 17 / CONFIRMED
+						</span>
+
+						<h3>WE'LL BE<br />WAITING FOR YOU.</h3>
+
+						<div class="reservation-confirmation__details">
+							<span data-confirm-date>FRIDAY</span>
+							<span data-confirm-time>20:30</span>
+							<span data-confirm-guests>2 GUESTS</span>
+						</div>
+
+						<button
+							type="button"
+							class="reservation-confirmation__close"
+							data-confirm-close
+						>
+							CLOSE
+						</button>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="js/header.js"></script>
+		<script src="js/hero.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/table-section.js"></script>
+		<script src="js/cellar-section.js"></script>
+		<script src="js/kitchen-section.js"></script>
+		<script src="js/reservation.js"></script>
+	</body>
+</html>

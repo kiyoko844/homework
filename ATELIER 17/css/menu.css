@@ -1,0 +1,349 @@
+.restaurant-menu {
+	position: relative;
+	padding: 42px;
+	background: #e8e0d5;
+	color: #171412;
+	overflow: hidden;
+}
+
+.restaurant-menu__header {
+	display: grid;
+	grid-template-columns: 70px 1fr auto;
+	align-items: start;
+	padding-bottom: 55px;
+	border-bottom: 1px solid rgba(23, 20, 18, 0.2);
+}
+
+.restaurant-menu__index,
+.restaurant-menu__meta,
+.restaurant-menu__hero-caption,
+.restaurant-menu__footer,
+.restaurant-menu__category-head > span {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 9px;
+	letter-spacing: 0.14em;
+}
+
+.restaurant-menu__index {
+	padding-top: 8px;
+	opacity: 0.5;
+}
+
+.restaurant-menu__heading {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.restaurant-menu__heading > span {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 9px;
+	letter-spacing: 0.18em;
+	opacity: 0.5;
+}
+
+.restaurant-menu__heading h2 {
+	margin: 0;
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(5rem, 11vw, 12rem);
+	font-weight: 400;
+	line-height: 0.65;
+	letter-spacing: -0.08em;
+}
+
+.restaurant-menu__meta {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding-top: 8px;
+	text-align: right;
+	opacity: 0.55;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.restaurant-menu__hero {
+	margin: 70px 0 90px;
+}
+
+.restaurant-menu__hero-image {
+	width: 100%;
+	height: min(52vw, 680px);
+	overflow: hidden;
+	background: #cfc5b9;
+}
+
+.restaurant-menu__hero-image img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	filter: saturate(0.72);
+	transform: scale(1.02);
+	transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.restaurant-menu__hero:hover img {
+	transform: scale(1.045);
+}
+
+.restaurant-menu__hero-caption {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 14px;
+	opacity: 0.5;
+}
+
+/* =========================
+   MENU GRID
+========================= */
+
+.restaurant-menu__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 90px;
+}
+
+.restaurant-menu__column {
+	display: flex;
+	flex-direction: column;
+	gap: 90px;
+}
+
+.restaurant-menu__category-head {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	padding-bottom: 18px;
+	border-bottom: 1px solid rgba(23, 20, 18, 0.55);
+}
+
+.restaurant-menu__category-head h3 {
+	margin: 0;
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(2.8rem, 4.5vw, 5rem);
+	font-weight: 400;
+	line-height: 0.8;
+	letter-spacing: -0.06em;
+}
+
+.restaurant-menu__category-head > span {
+	opacity: 0.45;
+}
+
+/* =========================
+   MENU ITEMS
+========================= */
+
+.menu-item {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: start;
+	gap: 30px;
+	padding: 22px 0;
+	border-bottom: 1px solid rgba(23, 20, 18, 0.14);
+	transition:
+		padding 0.35s ease,
+		background 0.35s ease;
+}
+
+.menu-item:hover {
+	padding-left: 12px;
+	padding-right: 12px;
+	background: rgba(23, 20, 18, 0.035);
+}
+
+.menu-item__main h4 {
+	margin: 0 0 7px;
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(1.5rem, 2vw, 2rem);
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: -0.025em;
+}
+
+.menu-item__main p {
+	margin: 0;
+	font-family: "Inter", sans-serif;
+	font-size: 9px;
+	line-height: 1.5;
+	color: rgba(23, 20, 18, 0.55);
+}
+
+.menu-item__price {
+	padding-top: 4px;
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 9px;
+	letter-spacing: 0.06em;
+	white-space: nowrap;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.restaurant-menu__footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 100px;
+	padding-top: 25px;
+	border-top: 1px solid rgba(23, 20, 18, 0.2);
+}
+
+.restaurant-menu__footer > span {
+	opacity: 0.45;
+}
+
+.restaurant-menu__footer a {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	color: #171412;
+	text-decoration: none;
+	transition: gap 0.35s ease;
+}
+
+.restaurant-menu__footer a span {
+	font-size: 15px;
+}
+
+.restaurant-menu__footer a:hover {
+	gap: 40px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+	.restaurant-menu {
+		padding: 30px;
+	}
+
+	.restaurant-menu__header {
+		grid-template-columns: 50px 1fr;
+	}
+
+	.restaurant-menu__meta {
+		grid-column: 2;
+		margin-top: 25px;
+		text-align: left;
+	}
+
+	.restaurant-menu__hero {
+		margin: 50px 0 70px;
+	}
+
+	.restaurant-menu__hero-image {
+		height: 60vw;
+	}
+
+	.restaurant-menu__grid {
+		gap: 45px;
+	}
+
+	.restaurant-menu__column {
+		gap: 60px;
+	}
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+	.restaurant-menu {
+		padding: 25px 18px 30px;
+	}
+
+	.restaurant-menu__header {
+		display: block;
+		padding-bottom: 40px;
+	}
+
+	.restaurant-menu__index {
+		margin-bottom: 35px;
+	}
+
+	.restaurant-menu__heading {
+		gap: 18px;
+	}
+
+	.restaurant-menu__heading h2 {
+		font-size: 22vw;
+	}
+
+	.restaurant-menu__meta {
+		margin-top: 30px;
+	}
+
+	.restaurant-menu__hero {
+		margin: 40px 0 60px;
+	}
+
+	.restaurant-menu__hero-image {
+		height: 115vw;
+	}
+
+	.restaurant-menu__grid {
+		grid-template-columns: 1fr;
+		gap: 65px;
+	}
+
+	.restaurant-menu__column {
+		gap: 65px;
+	}
+
+	.restaurant-menu__category-head h3 {
+		font-size: clamp(3rem, 15vw, 5rem);
+	}
+
+	.menu-item {
+		grid-template-columns: 1fr auto;
+		gap: 15px;
+		padding: 19px 0;
+	}
+
+	.menu-item:hover {
+		padding-left: 0;
+		padding-right: 0;
+		background: transparent;
+	}
+
+	.menu-item__main h4 {
+		font-size: 1.55rem;
+	}
+
+	.menu-item__main p {
+		font-size: 8px;
+	}
+
+	.menu-item__price {
+		font-size: 8px;
+	}
+
+	.restaurant-menu__footer {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 25px;
+		margin-top: 70px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.restaurant-menu__hero-image img,
+	.menu-item,
+	.restaurant-menu__footer a {
+		transition: none;
+	}
+}
+.menu-item__main h4 {
+	transition: color 0.3s ease;
+}
+
+.menu-item:hover .menu-item__main h4 {
+	color: #5b2027;
+}

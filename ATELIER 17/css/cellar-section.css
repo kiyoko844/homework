@@ -1,0 +1,360 @@
+.cellar-section {
+	position: relative;
+	padding: 120px 42px 100px;
+	background: #171412;
+	color: #e8e0d5;
+	overflow: hidden;
+}
+
+.cellar-section__top {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding-bottom: 45px;
+	border-bottom: 1px solid rgba(232, 224, 213, 0.18);
+}
+
+.cellar-section__top > span {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 9px;
+	font-weight: 400;
+	letter-spacing: 0.18em;
+	color: rgba(232, 224, 213, 0.45);
+}
+
+.cellar-section__top h2 {
+	margin: 0;
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(5rem, 11vw, 12rem);
+	font-weight: 400;
+	line-height: 0.68;
+	letter-spacing: -0.085em;
+}
+
+.cellar-section__visual {
+	position: relative;
+	margin-top: 70px;
+}
+
+.cellar-section__image {
+	position: relative;
+	width: 100%;
+	height: min(62vw, 820px);
+	overflow: hidden;
+	background: #211d19;
+}
+
+.cellar-section__image::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		180deg,
+		rgba(10, 8, 6, 0.05) 20%,
+		rgba(10, 8, 6, 0.2) 60%,
+		rgba(10, 8, 6, 0.62) 100%
+	);
+	pointer-events: none;
+}
+
+.cellar-section__image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(0.72) saturate(0.72);
+	transform: scale(1.04);
+	transition:
+		transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+		filter 1s ease;
+}
+
+.cellar-section__visual:hover .cellar-section__image img {
+	transform: scale(1.085);
+	filter: brightness(0.8) saturate(0.82);
+}
+
+.cellar-section__mark {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	pointer-events: none;
+	mix-blend-mode: screen;
+}
+
+.cellar-section__mark span {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 0.45em;
+	text-indent: 0.45em;
+	color: #e8e0d5;
+}
+
+.cellar-section__mark strong {
+	margin-top: 8px;
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(9rem, 18vw, 18rem);
+	font-weight: 400;
+	line-height: 0.52;
+	letter-spacing: -0.1em;
+	color: #e8e0d5;
+}
+
+.cellar-section__caption {
+	position: absolute;
+	right: 28px;
+	bottom: 24px;
+	z-index: 3;
+	display: flex;
+	gap: 28px;
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 8px;
+	font-weight: 400;
+	letter-spacing: 0.16em;
+	color: rgba(232, 224, 213, 0.7);
+}
+
+.cellar-section__list {
+	margin-top: 80px;
+}
+
+.cellar-section__list-head {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 18px;
+	border-bottom: 1px solid rgba(232, 224, 213, 0.18);
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 8px;
+	font-weight: 400;
+	letter-spacing: 0.16em;
+	color: rgba(232, 224, 213, 0.42);
+}
+
+.wine-item {
+	position: relative;
+	display: grid;
+	grid-template-columns: 70px minmax(0, 1fr) 100px 120px;
+	align-items: center;
+	min-height: 125px;
+	border-bottom: 1px solid rgba(232, 224, 213, 0.14);
+	transition:
+		background-color 0.45s ease,
+		padding 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wine-item::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: #5b2027;
+	opacity: 0;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition:
+		transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+		opacity 0.45s ease;
+	z-index: 0;
+}
+
+.wine-item:hover::before {
+	opacity: 0.28;
+	transform: scaleX(1);
+}
+
+.wine-item > * {
+	position: relative;
+	z-index: 1;
+}
+
+.wine-item__number {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 9px;
+	letter-spacing: 0.12em;
+	color: rgba(232, 224, 213, 0.35);
+}
+
+.wine-item__name {
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+}
+
+.wine-item__name > span {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 8px;
+	letter-spacing: 0.15em;
+	color: #b29468;
+	transition: color 0.35s ease;
+}
+
+.wine-item__name h3 {
+	margin: 0;
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(2rem, 3vw, 3.2rem);
+	font-weight: 400;
+	line-height: 0.85;
+	letter-spacing: -0.045em;
+	transition:
+		color 0.35s ease,
+		transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wine-item__year {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 9px;
+	letter-spacing: 0.12em;
+	color: rgba(232, 224, 213, 0.45);
+}
+
+.wine-item__price {
+	justify-self: end;
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 10px;
+	letter-spacing: 0.08em;
+	color: #e8e0d5;
+}
+
+.wine-item:hover .wine-item__name h3 {
+	color: #e8e0d5;
+	transform: translateX(12px);
+}
+
+.wine-item:hover .wine-item__name > span {
+	color: #e8e0d5;
+}
+
+@media (max-width: 900px) {
+	.cellar-section {
+		padding: 90px 28px 80px;
+	}
+
+	.cellar-section__top h2 {
+		font-size: clamp(4.5rem, 13vw, 8rem);
+	}
+
+	.cellar-section__visual {
+		margin-top: 55px;
+	}
+
+	.cellar-section__image {
+		height: 70vw;
+	}
+
+	.cellar-section__list {
+		margin-top: 60px;
+	}
+
+	.wine-item {
+		grid-template-columns: 45px minmax(0, 1fr) 70px 95px;
+		min-height: 115px;
+	}
+
+	.wine-item__name h3 {
+		font-size: clamp(1.8rem, 4vw, 2.7rem);
+	}
+}
+
+@media (max-width: 700px) {
+	.cellar-section {
+		padding: 75px 20px 65px;
+	}
+
+	.cellar-section__top {
+		display: block;
+		padding-bottom: 32px;
+	}
+
+	.cellar-section__top > span {
+		display: block;
+		margin-bottom: 28px;
+	}
+
+	.cellar-section__top h2 {
+		font-size: clamp(4rem, 18vw, 7rem);
+		line-height: 0.7;
+	}
+
+	.cellar-section__visual {
+		margin-top: 40px;
+	}
+
+	.cellar-section__image {
+		height: 115vw;
+	}
+
+	.cellar-section__mark strong {
+		font-size: 42vw;
+	}
+
+	.cellar-section__caption {
+		right: 16px;
+		bottom: 16px;
+		gap: 16px;
+		font-size: 7px;
+	}
+
+	.cellar-section__list {
+		margin-top: 50px;
+	}
+
+	.cellar-section__list-head {
+		padding-bottom: 14px;
+	}
+
+	.wine-item {
+		grid-template-columns: 32px minmax(0, 1fr) auto;
+		column-gap: 12px;
+		padding: 24px 0;
+		min-height: auto;
+	}
+
+	.wine-item__year {
+		display: none;
+	}
+
+	.wine-item__name {
+		gap: 7px;
+	}
+
+	.wine-item__name h3 {
+		font-size: clamp(1.7rem, 8vw, 2.4rem);
+		line-height: 0.82;
+	}
+
+	.wine-item__name > span {
+		font-size: 7px;
+	}
+
+	.wine-item__price {
+		font-size: 8px;
+	}
+
+	.wine-item:hover .wine-item__name h3 {
+		transform: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cellar-section__image img,
+	.wine-item,
+	.wine-item::before,
+	.wine-item__name h3,
+	.wine-item__name > span {
+		transition: none;
+	}
+
+	.cellar-section__visual:hover .cellar-section__image img {
+		transform: scale(1.04);
+	}
+
+	.wine-item:hover .wine-item__name h3 {
+		transform: none;
+	}
+}
